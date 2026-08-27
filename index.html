@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Rakshabandhan, Megha! 🪢</title>
+  <meta name="description"
+    content="A special Rakshabandhan wish for my dearest sister Megha — from your Bhaiya, with love." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Floating Petals -->
+  <div class="petals-container" id="petals-container"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="diya-row">
+        <span class="diya">🪔</span>
+        <span class="diya">🌸</span>
+        <span class="diya">🪔</span>
+      </div>
+      <p class="hero-sub">With all my love &amp; blessings</p>
+      <h1 class="hero-title">Happy Rakshabandhan</h1>
+      <h2 class="hero-name">Megha <span>🪢</span></h2>
+      <p class="hero-tagline">Bhaiya ka sab se khaas "most precious" bauaa 🌺</p>
+      <a href="#countdown" class="cta-btn">Let's Celebrate ↓</a>
+    </div>
+    <div class="mandala-bg"></div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="section countdown-section" id="countdown">
+    <div class="section-inner">
+      <h2 class="section-title">⏳ Counting Down to Our Special Day</h2>
+      <div class="countdown-grid" id="countdown-grid">
+        <div class="count-box"><span id="cd-days">00</span><label>Days</label></div>
+        <div class="count-box"><span id="cd-hours">00</span><label>Hours</label></div>
+        <div class="count-box"><span id="cd-mins">00</span><label>Minutes</label></div>
+        <div class="count-box"><span id="cd-secs">00</span><label>Seconds</label></div>
+      </div>
+      <p class="countdown-note" id="countdown-note"></p>
+    </div>
+  </section>
+
+  <!-- RAKHI TIE -->
+  <section class="section rakhi-section" id="rakhi-section">
+    <div class="section-inner">
+      <h2 class="section-title">🪢 Tie the Rakhi</h2>
+      <p class="section-desc">Click the rakhi to tie it on Bhaiya's wrist!</p>
+      <div class="rakhi-container" id="rakhi-container">
+        <div class="wrist-area">
+          <div class="wrist" id="wrist">
+            <span class="wrist-label">Bhaiya's wrist</span>
+          </div>
+          <div class="rakhi-drag" id="rakhi-drag" title="Click to tie!">
+            <div class="rakhi-icon">🪢</div>
+            <p class="drag-hint">Tap me!</p>
+          </div>
+        </div>
+        <div class="tied-message" id="tied-message">
+          <div class="tied-anim">🎊</div>
+          <p>Rakhi tied! <br />Bhaiya will always protect you, Megha! ❤️</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONAL MESSAGE -->
+  <section class="section message-section" id="message-section">
+    <div class="section-inner">
+      <h2 class="section-title">💌 Bhaiya ka Paigam</h2>
+      <div class="letter-card">
+        <div class="letter-header">
+          <span>🌸</span> Dear Megha (Bauaa) <span>🌸</span>
+        </div>
+        <div class="letter-body">
+          <p>Dada ki taraf se bahut saara pyaar aur bahut saara aashirwaad. 🙏</p>
+          <p>Khub khush raho aur khub tarraki karo, meri pyaari bauaa. 🌺</p>
+          <p>Aur hamesha apne bhaiya ke paas rehna — kabhi door mat jaana, behna. 🥺💕</p>
+          <p class="letter-highlight">Yaad rakho meri nalayak bauaa —<br />
+            <em>nalayak hote hue bhi tumhare paas <strong>"most precious"</strong> wala tag hai.</em> 👑
+          </p>
+        </div>
+        <div class="letter-sign">
+          — Tera Bhaiya 🤍
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIFT BOX -->
+  <section class="section gift-section" id="gift-section">
+    <div class="section-inner">
+      <h2 class="section-title">🎁 A Special Gift for You</h2>
+      <p class="section-desc">Tap the gift box to unwrap your surprise!</p>
+      <div class="gift-wrapper" id="gift-wrapper" onclick="openGift()">
+        <div class="gift-box" id="gift-box">
+          <div class="gift-lid" id="gift-lid">
+            <div class="gift-bow">🎀</div>
+          </div>
+          <div class="gift-base"></div>
+        </div>
+        <div class="gift-reveal" id="gift-reveal">
+          <div class="reveal-emoji">🪢</div>
+          <h3>Happy Rakshabandhan, Megha!</h3>
+          <p>Tum hamesha meri sabse khaas rahogi! ❤️</p>
+          <div class="sparkles">✨🌸✨🌟✨🌺✨</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIBLING QUIZ -->
+  <section class="section quiz-section" id="quiz-section">
+    <div class="section-inner">
+      <h2 class="section-title">🧠 The Sibling Quiz</h2>
+      <p class="section-desc">How well do you know your Bhaiya? Let's find out!</p>
+      <div class="quiz-card" id="quiz-card">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+        </div>
+        <p class="quiz-counter" id="quiz-counter">Question 1 of 5</p>
+        <p class="quiz-question" id="quiz-question">Loading...</p>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div class="quiz-feedback" id="quiz-feedback"></div>
+        <button class="quiz-next-btn" id="quiz-next-btn" onclick="nextQuestion()" style="display:none;">Next →</button>
+      </div>
+      <div class="quiz-result" id="quiz-result" style="display:none;">
+        <div class="result-emoji" id="result-emoji"></div>
+        <h3 id="result-title"></h3>
+        <p id="result-desc"></p>
+        <button class="cta-btn" onclick="resetQuiz()">Try Again 🔄</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-diyas">🪔🌸🪢🌸🪔</div>
+    <p>Made with ❤️ by your Bhaiya, especially for you, Megha</p>
+    <p class="footer-sub">Rakshabandhan 2026 · Stay happy always 🌸</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
